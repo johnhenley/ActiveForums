@@ -230,6 +230,7 @@ namespace DotNetNuke.Modules.ActiveForums
 		public const string EditorToolbar = "EDITORTOOLBAR";
 		public const string EditorStyle = "EDITORSTYLE";
 		public const string EditorPermittedUsers = "EDITORPERMITTEDUSERS";
+        public const string EditorMobile = "EDITORMOBILE";
 		public const string AttachCount = "ATTACHCOUNT";
 		public const string AttachMaxSize = "ATTACHMAXSIZE";
 		public const string AttachTypeAllowed = "ATTACHTYPEALLOWED";
@@ -237,6 +238,10 @@ namespace DotNetNuke.Modules.ActiveForums
 		//public const string AttachStore = "ATTACHSTORE";
 		public const string AttachMaxHeight = "ATTACHMAXHEIGHT";
 		public const string AttachMaxWidth = "ATTACHMAXWIDTH";
+        public const string MaxAttachWidth = "MAXATTACHWIDTH";
+        public const string MaxAttachHeight = "MAXATTACHHEIGHT";
+        public const string AttachInsertAllowed = "ATTACHINSERTALLOWED";
+        public const string ConvertingToJpegAllowed = "CONVERTINGTOJPEGALLOWED";
 		//public const string AttachUniqueFileNames = "ATTACHUNIQUEFILENAMES";  
 		public const string IndexContent = "INDEXCONTENT";
 		public const string AllowRSS = "ALLOWRSS";
@@ -267,6 +272,8 @@ namespace DotNetNuke.Modules.ActiveForums
 		public const string ActiveSocialEnabled = "AMASON";
 		public const string ActiveSocialTopicsOnly = "AMASTO";
 		public const string ActiveSocialSecurityOption = "AMASSEC";
+        public const string AllowLikes = "ALLOWLIKES";
+
 
         /*
 		public const string MCEnabled = "MCENABLED";
@@ -293,6 +300,7 @@ namespace DotNetNuke.Modules.ActiveForums
 	{
 		public const string ForumId = "aff";
 		public const string GroupId = "afg";
+        public const string GroupIdName = "GroupId";
 		public const string TopicId = "aft";
 		public const string ReplyId = "afr";
 		public const string ViewType = "afv";

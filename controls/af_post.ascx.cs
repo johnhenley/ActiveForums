@@ -151,16 +151,12 @@ namespace DotNetNuke.Modules.ActiveForums
             ctlForm.AllowHTML = _allowHTML;
             if (_allowHTML)
             {
-                _editorType = _fi.EditorType;
+                if (Request.Browser.IsMobileDevice) _editorType = (EditorTypes)_fi.EditorMobile;
+                else _editorType = _fi.EditorType;
             }
             else
             {
                 _editorType = EditorTypes.TEXTBOX;
-            }
-            if (Request.Browser.IsMobileDevice)
-            {
-                _editorType = EditorTypes.TEXTBOX;
-                _allowHTML = false;
             }
             ctlForm.EditorType = _editorType;
             ctlForm.ForumInfo = _fi;
@@ -1016,6 +1012,11 @@ namespace DotNetNuke.Modules.ActiveForums
             var body = ctlForm.Body;
             subject = Utilities.CleanString(PortalId, subject, false, EditorTypes.TEXTBOX, _fi.UseFilter, false, ForumModuleId, _themePath, false);
             body = Utilities.CleanString(PortalId, body, _allowHTML, _editorType, _fi.UseFilter, _fi.AllowScript, ForumModuleId, _themePath, _fi.AllowEmoticons);
+			// This HTML decode is used to make Quote functionality work properly even when it appears in Text Box instead of Editor
+            if (Request.Params[ParamKeys.QuoteId] != null)
+            {
+                body = Utilities.HTMLDecode(body);
+            }
             int authorId;
             string authorName;
             if (Request.IsAuthenticated)

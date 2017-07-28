@@ -1157,7 +1157,7 @@ From,
     <value>You are not authorized to post a reply.</value>
   </data>
   <data name="[RESX:NotAuthorizedTopic].Text" xml:space="preserve">
-    <value>You are not authorized to create a new topic.</value>
+    <value>&lt;span class="afnotauthorized"&gt;You are not authorized to create a new topic&lt;/span&gt;</value>
   </data>
   <data name="[RESX:DateCreated].Text" xml:space="preserve">
     <value>Date Created</value>
@@ -1257,6 +1257,21 @@ From,
   </data>
   <data name="[RESX:CreateThumbnail].Text" xml:space="preserve">
     <value>Create Thumbnail</value>
+  </data>
+  <data name="[RESX:SplitCreate].Text" xml:space="preserve">
+    <value>Split</value>
+  </data>
+  <data name="[RESX:SplitSave].Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="[RESX:SplitCancel].Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="[RESX:SplitSaveConfirm].Text" xml:space="preserve">
+    <value>Save split?</value>
+  </data>
+  <data name="[RESX:SplitCancelConfirm].Text" xml:space="preserve">
+    <value>Cancel split?</value>
   </data>
   <data name="[RESX:FileName].Text" xml:space="preserve">
     <value>File Name</value>
@@ -1454,7 +1469,7 @@ From,
     <value>&lt;b&gt;Reason:&lt;/b&gt; [Reason]&lt;br /&gt;&lt;b&gt;Comments:&lt;/b&gt; [Comment]&lt;hr noshade /&gt;[Post] &lt;br /&gt;&lt;br /&gt;&lt;a href="[URL]" target="_blank"&gt;[URL]&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;</value>
   </data>
   <data name="AlertSubject.Text" xml:space="preserve">
-    <value>A post by [DisplayName] has been flagged for review</value>
+    <value>A post by [DisplayName] has been flagged for review by [FlaggedBy]</value>
   </data>
   <data name="NotificationBodyReply.Text" xml:space="preserve">
     <value>[Post]</value>
@@ -1572,5 +1587,8 @@ From,
   </data>
   <data name="[RESX:Uploading].Text" xml:space="preserve">
     <value>Uploading</value>
+  </data>
+  <data name="[RESX:SplitHeader].Text" xml:space="preserve">
+    <value>Split mode:</value>
   </data>
 </root>

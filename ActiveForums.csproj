@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DotNetNuke.Modules.ActiveForums</RootNamespace>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -49,6 +49,7 @@
     <DebugType>full</DebugType>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>..\..\bin\</OutputPath>
@@ -59,6 +60,7 @@
     <WarningLevel>1</WarningLevel>
     <DebugType>none</DebugType>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Enterprise|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -70,6 +72,7 @@
     <Optimize>true</Optimize>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Standard|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -79,6 +82,7 @@
     <DebugType>None</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LITE|AnyCPU' ">
     <OutputPath>bin\LITE\</OutputPath>
@@ -88,6 +92,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <Optimize>true</Optimize>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Express|AnyCPU' ">
     <OutputPath>bin\Express\</OutputPath>
@@ -96,51 +101,36 @@
     <DebugType>None</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClientDependency.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\ClientDependency.Core.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Core.8.0.0.809\lib\net40\DotNetNuke.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DotNetNuke, Version=7.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\DotNetNuke.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke.Web, Version=8.0.0.809, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.Web.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DotNetNuke.Web, Version=7.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\DotNetNuke.Web.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\DotNetNuke.Web.Client.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DotNetNuke.WebControls, Version=2.4.0.598, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\DotNetNuke.WebControls.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke.Web.Client, Version=7.4.2.216, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.Client.7.4.2.216\lib\net40\DotNetNuke.Web.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\DotNetNuke.WebUtility.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>packages\DotNetNuke.Core.8.0.0.809\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\Microsoft.Web.Helpers.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>packages\microsoft-web-helpers.2.1.20710.2\lib\net40\Microsoft.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -164,8 +154,7 @@
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\System.Net.Http.Formatting.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>ReferencedAssemblies\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web">
@@ -173,22 +162,44 @@
     </Reference>
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\System.Web.Http.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.2.0.20505.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.RegularExpressions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Telerik.Web.UI, Version=2012.3.1205.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DNN 7.0.0\Telerik.Web.UI.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.Data.2.0.20505.0\lib\net40\WebMatrix.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.WebData.2.0.20505.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -211,11 +222,13 @@
     <Content Include="active\am-ui.css" />
     <Content Include="active\amlib.js" />
     <Content Include="active\close.gif" />
+    <Content Include="BuildScripts\MSBuild.Community.Tasks.dll" />
     <Content Include="Classic.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="config\templates\AddThis.txt" />
     <Content Include="config\templates\AdminWatchEmail_text.txt" />
+    <None Include="app.config" />
     <None Include="BuildScripts\ModulePackage.targets">
       <SubType>Designer</SubType>
     </None>
@@ -262,14 +275,18 @@
     <Content Include="controls\af_searchadvanced.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Content Include="controls\htmlcontrols\movetopic.ascx" />
+    <Content Include="controls\htmlcontrols\movetopic.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="controls\htmlcontrols\quickedit.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="controls\profile_adminsettings.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Content Include="controls\profile_mypreferences.ascx" />
+    <Content Include="controls\profile_mypreferences.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="App_LocalResources\ForumSettings.ascx.resx">
       <SubType>Designer</SubType>
     </Content>
@@ -288,7 +305,6 @@
     <EmbeddedResource Include="sql\FullTextInstallPart2.sql" />
     <Content Include="Documentation\License.txt" />
     <Content Include="Documentation\ReleaseNotes.txt" />
-    <Content Include="ForumEditor.ascx" />
     <Content Include="handlers\adminhelper.ashx" />
     <Content Include="images\add-circle.png" />
     <Content Include="images\af-fileicon.png" />
@@ -313,6 +329,8 @@
     <Content Include="images\save16.png" />
     <Content Include="module.css" />
     <EmbeddedResource Include="scripts\afadmin.properties.js" />
+    <Content Include="ReferencedAssemblies\System.Net.Http.Formatting.dll" />
+    <Content Include="ReferencedAssemblies\System.Web.Http.dll" />
     <Content Include="scripts\afattach.js" />
     <Content Include="scripts\afcommon.js" />
     <Content Include="scripts\afdebug.js" />
@@ -338,6 +356,7 @@
     <Content Include="ForumSettings.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
+    <None Include="packages.config" />
     <None Include="sql\04.01.17.SqlDataProvider" />
     <None Include="sql\04.01.18.SqlDataProvider" />
     <None Include="sql\04.02.06.SqlDataProvider" />
@@ -349,6 +368,7 @@
     <None Include="sql\04.03.06.SqlDataProvider" />
     <None Include="sql\04.03.09.SqlDataProvider" />
     <Content Include="scripts\usereditor.js" />
+    <Content Include="scripts\splitmanager.js" />
     <Content Include="sql\CoreForumsToActiveForums.sql" />
     <Content Include="themes\_default\emoticons\angry.gif" />
     <Content Include="themes\_default\emoticons\arrow.gif" />
@@ -545,12 +565,16 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="ControlPanel.css" />
-    <Content Include="controls\admin_categories.ascx" />
+    <Content Include="controls\admin_categories.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="controls\admin_filters.ascx" />
     <Content Include="controls\admin_home.ascx" />
     <Content Include="controls\admin_manageforums_home.ascx" />
     <Content Include="controls\admin_ranks.ascx" />
-    <Content Include="controls\admin_tags.ascx" />
+    <Content Include="controls\admin_tags.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="controls\admin_templates.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -563,7 +587,9 @@
     <Content Include="controls\af_members.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Content Include="controls\af_modreport.ascx" />
+    <Content Include="controls\af_modreport.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="controls\af_polledit.ascx" />
     <Content Include="controls\af_search.ascx">
       <SubType>ASPXCodeBehind</SubType>
@@ -580,11 +606,15 @@
     <Content Include="controls\admin_manageforums.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Content Include="controls\admin_manageforums_forumeditor.ascx" />
+    <Content Include="controls\admin_manageforums_forumeditor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="controls\af_confirmaction.ascx">
       <SubType>Form</SubType>
     </Content>
-    <Content Include="controls\af_modtopics.ascx" />
+    <Content Include="controls\af_modtopics.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="controls\af_posticonlist.ascx" />
     <Content Include="controls\af_profile.ascx" />
     <Content Include="controls\af_quickjump.ascx">
@@ -639,6 +669,11 @@
     <None Include="sql\05.01.03.SqlDataProvider" />
     <None Include="sql\05.02.00.SqlDataProvider" />
     <None Include="sql\05.02.01.SqlDataProvider" />
+    <None Include="sql\06.00.02.SqlDataProvider" />
+    <None Include="sql\06.02.06.SqlDataProvider" />
+    <None Include="sql\06.02.07.SqlDataProvider" />
+    <None Include="sql\06.01.06.SqlDataProvider" />
+    <None Include="sql\06.01.03.SqlDataProvider" />
     <None Include="sql\Enterprise.sql" />
     <Content Include="config\templates\ModAlert_text.txt" />
     <Content Include="config\templates\ModEmail_text.txt" />
@@ -648,7 +683,9 @@
     <Content Include="config\defaultsetup.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="controls\af_modsplittopic.ascx" />
+    <Content Include="controls\af_modsplittopic.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="images\ranks\blue_square_01.gif" />
     <Content Include="images\ranks\blue_square_02.gif" />
     <Content Include="images\ranks\blue_square_03.gif" />
@@ -721,6 +758,8 @@
     <Compile Include="class\HashtableExtensions.cs" />
     <Compile Include="class\DataRowExtensions.cs" />
     <Compile Include="class\DataRecordExtensions.cs" />
+    <Compile Include="class\Likes.cs" />
+    <Compile Include="class\LikesController.cs" />
     <Compile Include="class\ParamBuilder.cs" />
     <Compile Include="class\StringExtensions.cs" />
     <Compile Include="class\WhatsNewModuleSettings.cs" />
@@ -739,6 +778,10 @@
     <Compile Include="controls\af_searchadvanced.ascx.designer.cs">
       <DependentUpon>af_searchadvanced.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DAL2\Content\Content.cs" />
+    <Compile Include="DAL2\Content\ContentController.cs" />
+    <Compile Include="DAL2\Reply\Reply.cs" />
+    <Compile Include="DAL2\Reply\ReplyController.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="SimulateDateDiff.cs" />
     <Compile Include="SimulateIsNumeric.cs" />
@@ -955,13 +998,6 @@
     <Compile Include="CustomControls\UserControls\WhatsNewRSS.cs">
     </Compile>
     <Compile Include="CustomControls\Views\ForumDisplay.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ForumEditor.ascx.designer.cs">
-      <DependentUpon>ForumEditor.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="ForumEditor.ascx.cs">
-      <DependentUpon>ForumEditor.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="handlers\adminhelper.ashx.cs">
@@ -1326,14 +1362,12 @@
     <EmbeddedResource Include="sql\FullTextInstallPart1.sql" />
     <None Include="ActiveForums.dnn">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="config\templates\BlogsView.txt" />
     <None Include="sql\05.00.01.SqlDataProvider" />
     <None Include="sql\05.01.00.SqlDataProvider" />
     <None Include="WhatsNewResources.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="class\API\" />
@@ -1358,13 +1392,13 @@
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MSBee\MSBuildExtras.FX1_1.CSharp.targets" Condition=" '$(BuildingInsideVisualStudio)' == '' AND '$(TargetFX1_1)'=='true'" />
-  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!--<Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />-->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <PropertyGroup>
     <Extension>zip</Extension>
     <DNNFileName>ActiveForums</DNNFileName>
     <PackageName>ActiveForums</PackageName>
-    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\..\..\..\Build\BuildScripts\</MSBuildCommunityTasksPath>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\Build\BuildScripts\</MSBuildCommunityTasksPath>
   </PropertyGroup>
   <Import Project="BuildScripts\ModulePackage.Targets" />
   <Target Name="AfterBuild" DependsOnTargets="PackageModule">
